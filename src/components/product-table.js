@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductCategoryRow from './product-category-row';
 import ProductRow from './product-row';
 
-class ProductTable extends Component {
-  render() {
+const ProductTable = ({products}) => {
     //Esto es la propiedad products que es del tipo array
-    const {products} = this.props;
+    
     // Seteando valores
     const rows = [];
     let lastCategory = null;
@@ -31,6 +30,6 @@ class ProductTable extends Component {
       </table>
     )
   }
-}
+
 
 export default ProductTable
